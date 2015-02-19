@@ -1,7 +1,13 @@
+// General Styles
 @import 'general/colors.scss';
 @import 'general/font.scss';
-@import 'home-page/home-page.scss';
+
+//Navigation
 @import 'top-nav/top-nav.scss';
+
+//Home Page
+@import 'home-page/home-page.scss';
+
 
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
