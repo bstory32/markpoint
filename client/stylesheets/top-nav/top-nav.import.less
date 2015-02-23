@@ -1,5 +1,7 @@
 .navbar {
 	margin-bottom: 0; 
+	border-bottom: solid 2px #0f8da3;
+	border-radius: 0;
 }
 
 .navbar .navbar-inner {
@@ -8,8 +10,20 @@
 
 .navbar-default .navbar-nav > li > a {
 	color: #102429;
+	text-transform: uppercase;
+	font-size: .9em;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
-	color: #0f8da3;
+.navbar-default .navbar-nav > li:hover {
+	background: #0f8da3;
+
+	&>a {
+		color: white;
+	}
+}
+.navbar-header {
+	-webkit-animation-duration: 1s!important;
+	-moz-animation-duration: 1s!important;
+	-o-animation-duration: 1s!important;
+	animation-duration: 1s!important;
 }
