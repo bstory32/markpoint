@@ -1,8 +1,50 @@
 <template name="contactPage">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h1>Contacts</h1>
+			<div class="col-sm-6">
+				<h2>About MarkPoint</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque ratione vel, nemo ut, ducimus iusto labore ipsa voluptatum porro inventore deserunt, mollitia in odit totam. Ex quam magnam provident?
+				</p>
+				<img src="http://placehold.it/550x350">
+
+
+			</div>
+			<div class="col-sm-6">
+				<h1>Contact Us</h1>
+				<form>
+					<div class="form-group">
+						<label for="fullName">Full Name</label>
+						<input type="text" class="form-control" id="fullName" placeholder="What's your name?">
+					</div>
+					<div class="form-group">
+						<label for="email">Email address</label>
+						<input type="email" class="form-control" id="email" placeholder="What's your email?">
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone Number</label>
+						<input type="tel" class="form-control" id="phone" placeholder="What number can we contact you at?">
+					</div>
+					<div class="form-group">
+						<label for="phone">Company</label>
+						<input type="text" class="form-control" id="phone" placeholder="What Company do you represent?">
+					</div>
+					<div class="form-group">
+						<label for="phone">Select a product</label>
+						<select class="form-control">
+							<option>Any</option>
+							<option>Web Design</option>
+							<option>Web Development</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="project">Tell us about your project?</label>
+						<textarea class="form-control" id="project" placeholder="How can we help?"></textarea>
+					</div>
+
+					
+					<button type="submit" class="btn btn-primary">Send us you info</button>
+				</form>
 			</div>
 		</div>
 	</div>
