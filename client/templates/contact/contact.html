@@ -14,40 +14,35 @@
 			</div>
 			<div class="col-sm-6">
 				<h1>Contact Us</h1>
+				{{#autoForm schema=contactPageSchema id="contactPage" type="method" meteormethod="sendEmail"}}
 				<form>
 					<div class="form-group">
-						<label for="fullName">Full Name</label>
-						<input type="text" class="form-control" id="fullName" placeholder="What's your name?">
+						{{> afQuickField name="name" placeholder="What's your name?"}}
 					</div>
 					<div class="form-group">
-						<label for="email">Email address</label>
-						<input type="email" class="form-control" id="email" placeholder="What's your email?">
+						{{> afQuickField name="email" placeholder="What's your email?"}}
 					</div>
 					<div class="form-group">
-						<label for="phone">Phone Number</label>
-						<input type="tel" class="form-control" id="phone" placeholder="What number can we contact you at?">
+						{{> afQuickField name="phone" placeholder="What number can we contact you at?"}}
 					</div>
 					<div class="form-group">
-						<label for="phone">Company</label>
-						<input type="text" class="form-control" id="phone" placeholder="What Company do you represent?">
+						{{> afQuickField name="company" placeholder="What Company do you represent?"}}
 					</div>
 					<div class="form-group">
-						<label for="phone">Select a product</label>
-						<select class="form-control">
-							<option>Any</option>
-							<option>Web Design</option>
-							<option>Web Development</option>
-						</select>
+						{{> afQuickField name="product"}}
 					</div>
 					<div class="form-group">
-						<label for="project">Tell us about your project?</label>
-						<textarea class="form-control" id="project" placeholder="How can we help?"></textarea>
+						{{> afQuickField name="message" rows=10 placeholder="How can we help?"}}
 					</div>
-
-					
-					<button type="submit" class="btn btn-primary">Send us your info</button>
+					<div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
 				</form>
+				{{/autoForm}}
 			</div>
 		</div>
 	</div>
+	
 </template>
+
+
