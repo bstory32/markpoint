@@ -1,4 +1,3 @@
-
 Schema = {};
 Schema.contact = new SimpleSchema({
   name: {
@@ -13,29 +12,8 @@ Schema.contact = new SimpleSchema({
   },
   message: {
     type: String,
-    label: "Tell us about your project?",
+    label: "Message",
     max: 1000
-  },
-  phone: {
-    type: String,
-    label: "Phone number"
-  },
-  company: {
-    type: String,
-    label: "Company"
-  },
-  product: {
-    type: String,
-    optional: true,
-    autoform: {
-      type: "select",
-      options: function () {
-        return [
-        {label: "Any", value: "any"},
-        {label: "Web Development", value: "Application"},
-        {label: "Web Design", value: "Design"}
-        ];
-      }
-    }
   }
 });
+

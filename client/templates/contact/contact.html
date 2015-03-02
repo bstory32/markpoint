@@ -1,47 +1,16 @@
-<template name="contactPage">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="about-markpoint">
-					<h2>About MarkPoint</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cumque ratione vel, nemo ut, ducimus iusto labore ipsa voluptatum porro inventore deserunt, mollitia in odit totam. Ex quam magnam provident?
-					</p>
-					<img src="http://placehold.it/550x350">
-				</div>
-
-
-			</div>
-			<div class="col-sm-6">
-				<h1>Contact Us</h1>
-				{{#autoForm schema=contactPageSchema id="contactPage" type="method" meteormethod="sendEmail"}}
-				<form>
-					
-					{{> afQuickField name="name" placeholder="What's your name?"}}
-					
-					
-					{{> afQuickField name="email" placeholder="What's your email?"}}
-					
-					
-					{{> afQuickField name="phone" placeholder="What number can we contact you at?"}}
-					
-					
-					{{> afQuickField name="company" placeholder="What Company do you represent?"}}
-					
-					
-					{{> afQuickField name="product"}}
-					
-					{{> afQuickField name="message" rows=10 placeholder="How can we help?"}}
-					
-					<div>
-						<button type="submit" class="btn btn-primary">Submit</button>
-					</div>
-				</form>
-				{{/autoForm}}
-			</div>
+<template name="contactForm">
+	{{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail"}}
+	<fieldset>
+		<legend>Contact Us</legend>
+		{{> afQuickField name="name"}}
+		{{> afQuickField name="email"}}
+		{{> afQuickField name="message" rows=10}}
+		<div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="reset" class="btn btn-default">Reset</button>
 		</div>
-	</div>
-	
+	</fieldset>
+	{{/autoForm}}
 </template>
 
 
