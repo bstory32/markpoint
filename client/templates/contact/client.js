@@ -1,6 +1,7 @@
+//client
 if (Meteor.isClient) {
-	Template.contactForm.helpers({
-		contactFormSchema: function() {
+	Template.contactPage.helpers({
+		contactPageSchema: function() {
 			return Schema.contact;
 		}
 	});

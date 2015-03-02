@@ -12,8 +12,29 @@ Schema.contact = new SimpleSchema({
   },
   message: {
     type: String,
-    label: "Message",
+    label: "Tell us about your project?",
     max: 1000
+  },
+  phone: {
+    type: String,
+    label: "Phone number"
+  },
+  company: {
+    type: String,
+    label: "Company"
+  },
+  product: {
+    type: String,
+    optional: true,
+    autoform: {
+      type: "select",
+      options: function () {
+        return [
+        {label: "Any", value: "any"},
+        {label: "Web Development", value: "Application"},
+        {label: "Web Design", value: "Design"}
+        ];
+      }
+    }
   }
 });
-
