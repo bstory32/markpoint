@@ -1,0 +1,15 @@
+<template name="rfpsList">
+  <div class="rfps-list">
+    {{#each rfps}}
+      {{> rfpsItem}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="rfpsItem">
+  <div class="rfps-item">
+    <div class="rfps-content">
+      <h3>{{name}}<span>{{email}}</span></h3>
+    </div>
+  </div>
+</template>
